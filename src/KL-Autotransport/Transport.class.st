@@ -42,7 +42,7 @@ Transport >> initialize [
 	mileage := 0.
 	places := 2.
 	cost := 5.
-	TO := true
+	TO := true.
 ]
 
 { #category : #calculating }
