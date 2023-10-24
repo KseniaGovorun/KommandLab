@@ -16,6 +16,12 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #calculating }
+Transport >> afterTrip [
+
+	^ self subclassResponsibility
+]
+
 { #category : #initialization }
 Transport >> initialize [ 
 
@@ -25,6 +31,12 @@ Transport >> initialize [
 	places := 2.
 	cost := 5.
 	TO := true
+]
+
+{ #category : #calculating }
+Transport >> priceTrip [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #printing }
