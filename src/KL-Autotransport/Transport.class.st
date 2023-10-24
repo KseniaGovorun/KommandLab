@@ -16,6 +16,18 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #comparing }
+Transport >> < aTransport [
+
+	^ self priceTrip < aTransport priceTrip
+]
+
+{ #category : #comparing }
+Transport >> > aTransport [
+
+	^ aTransport < self
+]
+
 { #category : #calculating }
 Transport >> afterTrip [
 
