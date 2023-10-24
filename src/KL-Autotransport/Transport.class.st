@@ -16,6 +16,24 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #comparing }
+Transport >> < aTransport [
+
+	^ self priceTrip < aTransport priceTrip
+]
+
+{ #category : #comparing }
+Transport >> > aTransport [
+
+	^ aTransport < self
+]
+
+{ #category : #calculating }
+Transport >> afterTrip [
+
+	^ self subclassResponsibility
+]
+
 { #category : #initialization }
 Transport >> initialize [ 
 
@@ -24,7 +42,13 @@ Transport >> initialize [
 	mileage := 0.
 	places := 2.
 	cost := 5.
-	TO := true
+	TO := true.
+]
+
+{ #category : #calculating }
+Transport >> priceTrip [
+
+	^ self subclassResponsibility
 ]
 
 { #category : #printing }
