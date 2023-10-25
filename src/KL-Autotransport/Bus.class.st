@@ -23,6 +23,22 @@ Bus >> initialize [
 	TO := true.
 ]
 
+{ #category : #'as yet unclassified' }
+Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
+
+	number := n.
+	year := y.
+	mileage := m.
+	p < 51
+		ifTrue: [ places := p ]
+		ifFalse: [
+			Transcript
+				show: 'Місць в автобусі не може бути більше 50'].
+	cost := c.
+	condit := con.
+	TO := t
+]
+
 { #category : #calculating }
 Bus >> priceTrip [
 

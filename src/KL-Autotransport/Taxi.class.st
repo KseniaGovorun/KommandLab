@@ -23,6 +23,21 @@ Taxi >> initialize [
 	
 ]
 
+{ #category : #initialization }
+Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
+
+	number := n.
+	year := y.
+	mileage := m.
+	p < 5
+		ifTrue: [ places := p ]
+		ifFalse: [
+			Transcript
+				show: 'Місць в таксі не може бути більше 4'].
+	cost := c.
+	TO := t
+]
+
 { #category : #calculating }
 Taxi >> priceTrip [
 
