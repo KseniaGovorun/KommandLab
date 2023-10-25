@@ -23,6 +23,7 @@ Taxi >> initialize [
 	
 ]
 
+
 { #category : #initialization }
 Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 

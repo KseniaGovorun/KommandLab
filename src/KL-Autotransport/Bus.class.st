@@ -11,6 +11,18 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #accessing }
+Bus >> condit [
+
+	^ condit
+]
+
+{ #category : #accessing }
+Bus >> condit: aBoolean [
+
+	condit := aBoolean
+]
+
 { #category : #initialization }
 Bus >> initialize [ 
 
