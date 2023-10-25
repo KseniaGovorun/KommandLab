@@ -29,6 +29,12 @@ Taxi >> priceTrip [
 	^ cost / places
 ]
 
+{ #category : #calculating }
+Taxi >> priceTrip: distance [
+
+	^ distance * cost / places
+]
+
 { #category : #printing }
 Taxi >> printOn: aStream [
 

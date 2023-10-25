@@ -29,6 +29,12 @@ Bus >> priceTrip [
 	^ cost / (places / 2)
 ]
 
+{ #category : #calculating }
+Bus >> priceTrip: distance [
+
+	^ distance * cost / (places / 2)
+]
+
 { #category : #printing }
 Bus >> printOn: aStream [
 
