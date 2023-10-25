@@ -33,7 +33,7 @@ Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 		ifTrue: [ places := p ]
 		ifFalse: [
 			Transcript
-				show: 'Місць в таксі не може бути більше 4'].
+				show: 'Місць в таксі максимум доступно 4'].
 	cost := c.
 	TO := t
 ]

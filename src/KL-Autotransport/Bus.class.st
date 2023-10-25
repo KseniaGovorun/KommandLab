@@ -33,7 +33,7 @@ Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 		ifTrue: [ places := p ]
 		ifFalse: [
 			Transcript
-				show: 'Місць в автобусі не може бути більше 50'].
+				show: 'Місць в автобусі максимум доступно 50'].
 	cost := c.
 	condit := con.
 	TO := t
