@@ -47,6 +47,7 @@ Taxi >> priceTrip [
 { #category : #calculating }
 Taxi >> priceTrip: distance [
 
+	mileage := mileage + distance.
 	^ distance * cost / places
 ]
 

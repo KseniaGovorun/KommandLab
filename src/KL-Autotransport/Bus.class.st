@@ -48,6 +48,7 @@ Bus >> priceTrip [
 { #category : #calculating }
 Bus >> priceTrip: distance [
 
+	mileage := mileage + distance.
 	^ distance * cost / (places / 2)
 ]
 
