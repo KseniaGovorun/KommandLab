@@ -39,12 +39,6 @@ Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 ]
 
 { #category : #calculating }
-Taxi >> priceTrip [
-
-	^ cost / places
-]
-
-{ #category : #calculating }
 Taxi >> priceTrip: distance [
 
 	mileage := mileage + distance.

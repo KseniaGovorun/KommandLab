@@ -40,12 +40,6 @@ Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 ]
 
 { #category : #calculating }
-Bus >> priceTrip [
-
-	^ cost / (places / 2)
-]
-
-{ #category : #calculating }
 Bus >> priceTrip: distance [
 
 	mileage := mileage + distance.

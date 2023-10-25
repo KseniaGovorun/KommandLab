@@ -51,6 +51,12 @@ Transport >> priceTrip [
 	^ self subclassResponsibility
 ]
 
+{ #category : #calculating }
+Transport >> priceTrip: distance [
+
+	^ self subclassResponsibility
+]
+
 { #category : #printing }
 Transport >> printOn: aStream [
 	aStream nextPutAll: 'Transport[ '.
