@@ -23,6 +23,18 @@ Taxi >> initialize [
 	
 ]
 
+{ #category : #accessing }
+Taxi >> maxSpeed [
+
+	^ maxSpeed
+]
+
+{ #category : #accessing }
+Taxi >> maxSpeed: aNumber [
+
+	maxSpeed := aNumber
+]
+
 { #category : #calculating }
 Taxi >> priceTrip [
 
