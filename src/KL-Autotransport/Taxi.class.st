@@ -23,27 +23,26 @@ Taxi >> initialize [
 	
 ]
 
-{ #category : #accessing }
-Taxi >> maxSpeed [
 
-	^ maxSpeed
-]
+{ #category : #initialization }
+Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 
-{ #category : #accessing }
-Taxi >> maxSpeed: aNumber [
-
-	maxSpeed := aNumber
-]
-
-{ #category : #calculating }
-Taxi >> priceTrip [
-
-	^ cost / places
+	number := n.
+	year := y.
+	mileage := m.
+	p < 5
+		ifTrue: [ places := p ]
+		ifFalse: [
+			Transcript
+				show: 'Місць в таксі максимум доступно 4'].
+	cost := c.
+	TO := t
 ]
 
 { #category : #calculating }
 Taxi >> priceTrip: distance [
 
+	mileage := mileage + distance.
 	^ distance * cost / places
 ]
 

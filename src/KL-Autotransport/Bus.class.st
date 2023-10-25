@@ -35,15 +35,26 @@ Bus >> initialize [
 	TO := true.
 ]
 
-{ #category : #calculating }
-Bus >> priceTrip [
+{ #category : #'as yet unclassified' }
+Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 
-	^ cost / (places / 2)
+	number := n.
+	year := y.
+	mileage := m.
+	p < 51
+		ifTrue: [ places := p ]
+		ifFalse: [
+			Transcript
+				show: 'Місць в автобусі максимум доступно 50'].
+	cost := c.
+	condit := con.
+	TO := t
 ]
 
 { #category : #calculating }
 Bus >> priceTrip: distance [
 
+	mileage := mileage + distance.
 	^ distance * cost / (places / 2)
 ]
 

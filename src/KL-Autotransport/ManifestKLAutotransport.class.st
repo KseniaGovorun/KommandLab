@@ -8,6 +8,27 @@ Class {
 }
 
 { #category : #'code-critics' }
+ManifestKLAutotransport class >> ruleCodeCruftLeftInMethodsRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#Bus #inizialize:year:mileage:places:cost:condit:TO: #false)) #'2023-10-25T21:33:11.899+03:00') #(#(#RGMethodDefinition #(#Taxi #inizialize:year:mileage:places:cost:maxSpeed:TO: #false)) #'2023-10-25T21:38:44.242+03:00') )
+]
+
+{ #category : #'code-critics' }
+ManifestKLAutotransport class >> ruleExcessiveArgumentsRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#Bus #inizialize:year:mileage:places:cost:condit:TO: #false)) #'2023-10-25T21:29:33.28+03:00') #(#(#RGMethodDefinition #(#Taxi #inizialize:year:mileage:places:cost:maxSpeed:TO: #false)) #'2023-10-25T21:38:49.141+03:00') )
+]
+
+{ #category : #'code-critics' }
+ManifestKLAutotransport class >> ruleUnclassifiedMethodsRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#Bus #inizialize:year:mileage:places:cost:condit:TO: #false)) #'2023-10-25T21:29:26.402+03:00') )
+]
+
+{ #category : #'code-critics' }
 ManifestKLAutotransport class >> ruleUtilityMethodsRuleV1FalsePositive [
 
 	<ignoreForCoverage>
