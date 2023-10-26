@@ -46,9 +46,12 @@ TaxiTest >> testInizializeDefault [
 TaxiTest >> testPriceTrip [
 	"comment stating purpose of instance-side method"
 	"scope: class-variables  &  instance-variables"
-	| taxi|
+	| taxi distance result |
    taxi := Taxi new.
-   self assert: taxi priceTrip equals: 5 / 4.
+	distance := 10.
+	result := taxi priceTrip: distance.
+	
+   self assert: result equals: 10 * 5 / 4.
 ]
 
 { #category : #tests }
