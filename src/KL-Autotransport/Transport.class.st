@@ -18,8 +18,10 @@ Class {
 
 { #category : #comparing }
 Transport >> < aTransport [
-
-	^ self priceTrip < aTransport priceTrip
+	|result1 result2|
+	result1 := self priceTrip: 100.
+	result2 := aTransport priceTrip: 100.
+	^  result1 < result2. 
 ]
 
 { #category : #comparing }

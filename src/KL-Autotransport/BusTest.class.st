@@ -44,9 +44,12 @@ BusTest >> testPriceTrip [
 	"comment stating purpose of instance-side method"
 	"scope: class-variables  &  instance-variables"
 
-	| bus |
+	| bus distance result |
 	bus := Bus new.
-   self assert: bus priceTrip equals: 5 / (50 / 2).
+	distance := 15.
+	result := bus priceTrip: distance.
+   self assert: result equals: distance * 5 / (50 / 2).
+
 ]
 
 { #category : #tests }
