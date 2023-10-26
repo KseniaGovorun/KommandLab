@@ -40,6 +40,20 @@ BusTest >> testInitializeDefault [
 ]
 
 { #category : #tests }
+BusTest >> testInitializeWithError [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+    | error |
+        error := nil.
+        [ 
+            Bus new number: 30; year: 2010; mileage: 2000; places: 145; cost: 7; condit: false; tO: true.
+        ] on: Error do: [ :e | error := e ]. 
+ 
+         self assert: error messageText equals: 'Місць в автобусі максимум доступно 50'.
+	
+]
+
+{ #category : #tests }
 BusTest >> testPriceTrip [
 	"comment stating purpose of instance-side method"
 	"scope: class-variables  &  instance-variables"

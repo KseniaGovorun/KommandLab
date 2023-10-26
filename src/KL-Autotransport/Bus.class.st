@@ -37,15 +37,18 @@ Bus >> initialize [
 
 { #category : #'as yet unclassified' }
 Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
-
+	
+	| messageText |
 	number := n.
 	year := y.
 	mileage := m.
 	p < 51
 		ifTrue: [ places := p ]
 		ifFalse: [
-			Transcript
-				show: 'Місць в автобусі максимум доступно 50'].
+			messageText := 'Місць в автобусі максимум доступно 50'.
+			Transcript show: messageText.
+			^ Error new message: messageText.
+			].
 	cost := c.
 	condit := con.
 	TO := t
