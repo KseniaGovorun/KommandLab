@@ -10,6 +10,13 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #'as yet unclassified' }
+Taxi >> afterTrip: distance [
+
+	mileage := mileage + distance.
+	^ mileage
+]
+
 { #category : #initialization }
 Taxi >> initialize [ 
 
@@ -41,7 +48,6 @@ Taxi >> inizialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 { #category : #calculating }
 Taxi >> priceTrip: distance [
 
-	mileage := mileage + distance.
 	^ distance * cost / places
 ]
 

@@ -29,7 +29,7 @@ Transport >> > aTransport [
 ]
 
 { #category : #calculating }
-Transport >> afterTrip [
+Transport >> afterTrip: distance [
 
 	^ self subclassResponsibility
 ]
@@ -43,12 +43,6 @@ Transport >> initialize [
 	places := 2.
 	cost := 5.
 	TO := true.
-]
-
-{ #category : #calculating }
-Transport >> priceTrip [
-
-	^ self subclassResponsibility
 ]
 
 { #category : #calculating }
