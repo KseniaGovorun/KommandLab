@@ -28,11 +28,17 @@ Transport >> > aTransport [
 	^ aTransport < self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #abstract }
 Transport >> Trip: dictance [
 
-	self afterTrip: dictance.
-	self priceTrip: dictance.
+	| price cnf |
+	price := self priceTrip: dictance.
+	cnf:=UIManager default
+		           confirm: 'price'
+		           label: 'Is price gut for you?'.
+		cnf 
+		ifTrue: [ self afterTrip: dictance ]
+		ifFalse: [ UIManager default inform: 'Trip canceled' ]
 ]
 
 { #category : #calculating }
