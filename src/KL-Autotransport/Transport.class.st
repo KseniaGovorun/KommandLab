@@ -30,8 +30,21 @@ Transport >> > aTransport [
 	^ aTransport < self
 ]
 
+{ #category : #abstract }
+Transport >> Trip: dictance [
+
+	| price cnf |
+	price := self priceTrip: dictance.
+	cnf:=UIManager default
+		           confirm: 'price'
+		           label: 'Is price gut for you?'.
+		cnf 
+		ifTrue: [ self afterTrip: dictance ]
+		ifFalse: [ UIManager default inform: 'Trip canceled' ]
+]
+
 { #category : #calculating }
-Transport >> afterTrip [
+Transport >> afterTrip: distance [
 
 	^ self subclassResponsibility
 ]
@@ -93,12 +106,6 @@ Transport >> places [
 Transport >> places: aNumber [
 
 	places :=  1 max: aNumber
-]
-
-{ #category : #calculating }
-Transport >> priceTrip [
-
-	^ self subclassResponsibility
 ]
 
 { #category : #calculating }

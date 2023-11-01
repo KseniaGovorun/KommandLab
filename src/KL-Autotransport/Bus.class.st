@@ -11,6 +11,13 @@ Class {
 	#category : #'KL-Autotransport'
 }
 
+{ #category : #'as yet unclassified' }
+Bus >> afterTrip: distance [
+
+	mileage := mileage + distance.
+	^ mileage
+]
+
 { #category : #accessing }
 Bus >> condit [
 
@@ -57,7 +64,6 @@ Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 { #category : #calculating }
 Bus >> priceTrip: distance [
 
-	mileage := mileage + distance.
 	^ distance * cost / (places / 2)
 ]
 
