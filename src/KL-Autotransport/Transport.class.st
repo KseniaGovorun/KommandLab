@@ -34,6 +34,18 @@ Transport >> afterTrip: distance [
 	^ self subclassResponsibility
 ]
 
+{ #category : #accessing }
+Transport >> cost [
+
+	^ cost
+]
+
+{ #category : #accessing }
+Transport >> cost: aNumber [
+
+	cost := 0.1 max: aNumber
+]
+
 { #category : #initialization }
 Transport >> initialize [ 
 
@@ -43,6 +55,42 @@ Transport >> initialize [
 	places := 2.
 	cost := 5.
 	TO := true.
+]
+
+{ #category : #accessing }
+Transport >> mileage [
+
+	^ mileage
+]
+
+{ #category : #accessing }
+Transport >> mileage: aNumber [
+
+	mileage :=  0 max: aNumber
+]
+
+{ #category : #accessing }
+Transport >> number [
+
+	^ number
+]
+
+{ #category : #accessing }
+Transport >> number: aNumber [
+
+	number := aNumber
+]
+
+{ #category : #accessing }
+Transport >> places [
+
+	^ places
+]
+
+{ #category : #accessing }
+Transport >> places: aNumber [
+
+	places :=  1 max: aNumber
 ]
 
 { #category : #calculating }
@@ -72,4 +120,28 @@ Transport >> printOn: aStream [
 
 		 
 	
+]
+
+{ #category : #accessing }
+Transport >> tO [
+
+	^ TO
+]
+
+{ #category : #accessing }
+Transport >> tO: aBoolean [
+
+	TO := aBoolean
+]
+
+{ #category : #accessing }
+Transport >> year [
+
+	^ year
+]
+
+{ #category : #accessing }
+Transport >> year: aNumber [
+
+	year := 1899 max: aNumber
 ]

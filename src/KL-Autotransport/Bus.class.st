@@ -18,6 +18,18 @@ Bus >> afterTrip: distance [
 	^ mileage
 ]
 
+{ #category : #accessing }
+Bus >> condit [
+
+	^ condit
+]
+
+{ #category : #accessing }
+Bus >> condit: aBoolean [
+
+	condit := aBoolean
+]
+
 { #category : #initialization }
 Bus >> initialize [ 
 
