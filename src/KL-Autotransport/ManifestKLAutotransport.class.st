@@ -81,7 +81,7 @@ ManifestKLAutotransport class >> ruleReVariableAssignedLiteralRuleV1FalsePositiv
 ManifestKLAutotransport class >> ruleUnclassifiedMethodsRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGMethodDefinition #(#Bus #inizialize:year:mileage:places:cost:condit:TO: #false)) #'2023-10-25T21:29:26.402+03:00') #(#(#RGMethodDefinition #(#Bus #afterTrip: #false)) #'2023-11-01T19:06:16.519+02:00') #(#(#RGMethodDefinition #(#Taxi #afterTrip: #false)) #'2023-11-01T19:07:05.227+02:00') )
+	^ #(#(#(#RGMethodDefinition #(#Bus #inizialize:year:mileage:places:cost:condit:TO: #false)) #'2023-10-25T21:29:26.402+03:00') #(#(#RGMethodDefinition #(#Bus #afterTrip: #false)) #'2023-11-01T19:06:16.519+02:00') #(#(#RGMethodDefinition #(#Taxi #afterTrip: #false)) #'2023-11-01T19:07:05.227+02:00') #(#(#RGMethodDefinition #(#Transport #Trip: #false)) #'2023-11-01T19:17:26.903+02:00') )
 ]
 
 { #category : #'code-critics' }

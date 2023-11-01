@@ -28,6 +28,13 @@ Transport >> > aTransport [
 	^ aTransport < self
 ]
 
+{ #category : #'as yet unclassified' }
+Transport >> Trip: dictance [
+
+	self afterTrip: dictance.
+	self priceTrip: dictance.
+]
+
 { #category : #calculating }
 Transport >> afterTrip: distance [
 
