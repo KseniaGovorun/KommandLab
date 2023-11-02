@@ -48,3 +48,31 @@ AutoContainer >> initialize [
 
 	memory := OrderedCollection new
 ]
+
+{ #category : #reading }
+AutoContainer >> readFromFile: aStream [
+	 | num year mileage places cost TO|
+        
+     	  num := aStream upTo: ' '.
+	     year := aStream upTo: ' '.
+	     mileage := aStream upTo: ' '.
+	     places := aStream upTo: ' '.
+		  cost := aStream upTo: ' '.
+		  TO := aStream upTo: ' '.
+
+     ^num
+]
+
+{ #category : #writing }
+AutoContainer >> saveToFile: fileName [ 
+	| file  |
+	file := fileName asFileReference writeStream.
+	
+   memory do: [:tran  | 
+		tran printOn: file.
+		file cr.
+		
+	].
+
+   file close.
+]
