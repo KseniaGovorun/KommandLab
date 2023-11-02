@@ -50,29 +50,22 @@ AutoContainer >> initialize [
 ]
 
 { #category : #reading }
-AutoContainer >> readFromFile: aStream [
-	 | num year mileage places cost TO|
-        
-     	  num := aStream upTo: ' '.
-	     year := aStream upTo: ' '.
-	     mileage := aStream upTo: ' '.
-	     places := aStream upTo: ' '.
-		  cost := aStream upTo: ' '.
-		  TO := aStream upTo: ' '.
-
-     ^num
+AutoContainer >> readFromFile: fileName [
+	 | file data |
+	 file := fileName asFileReference  readStream.
+	
+	 data:= STON fromStream: file.
+	 memory := data.
+	
+	^data.
 ]
 
 { #category : #writing }
 AutoContainer >> saveToFile: fileName [ 
-	| file  |
+	| file data |
 	file := fileName asFileReference writeStream.
-	
-   memory do: [:tran  | 
-		tran printOn: file.
-		file cr.
-		
-	].
+	data:= STON toStringPretty:  memory.
+   file nextPutAll: data.
 
    file close.
 ]
