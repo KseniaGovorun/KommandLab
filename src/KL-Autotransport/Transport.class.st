@@ -149,6 +149,14 @@ Transport >> tO: aBoolean [
 	TO := aBoolean
 ]
 
+{ #category : #writing }
+Transport >> writeToFile: fileName [
+	| file |
+	file := fileName asFileReference writeStream.
+	self printOn: file.
+	file close.
+]
+
 { #category : #accessing }
 Transport >> year [
 
