@@ -33,7 +33,7 @@ Bus >> condit: aBoolean [
 { #category : #initialization }
 Bus >> initialize [ 
 
-	number := 23. 
+	number:= 23. 
 	year := 2003.
 	mileage := 0.
 	places := 50.
@@ -42,10 +42,10 @@ Bus >> initialize [
 	TO := true.
 ]
 
-{ #category : #'as yet unclassified' }
-Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
-	
-	| messageText |
+
+{ #category : #'class initialization' }
+Bus >> initialize: n year: y mileage: m places: p cost: c condit: con TO: t [
+
 	number := n.
 	year := y.
 	mileage := m.
@@ -64,7 +64,7 @@ Bus >> inizialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 { #category : #calculating }
 Bus >> priceTrip: distance [
 
-	^ distance * cost / (places / 2)
+	^ (distance * cost) / (places / 2)
 ]
 
 { #category : #printing }

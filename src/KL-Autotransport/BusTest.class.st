@@ -13,7 +13,7 @@ BusTest >> testInitialize [
 	"comment stating purpose of instance-side method"
 	"scope: class-variables  &  instance-variables"
 	| bus |
-	bus := Bus new number: 30; year: 2010; mileage: 2000; places: 45; cost: 7; condit: false; tO: true.
+	bus := Bus new initialize: 30 year: 2010 mileage: 2000 places: 45 cost: 7 condit: false TO: true.
 	
 	self assert: bus number equals: 30.
    self assert: bus year equals: 2010.

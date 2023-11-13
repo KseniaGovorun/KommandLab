@@ -49,6 +49,12 @@ AutoContainer >> initialize [
 	memory := OrderedCollection new
 ]
 
+
+{ #category : #accessing }
+AutoContainer >> memory [
+
+	^ memory
+
 { #category : #reading }
 AutoContainer >> readFromFile: fileName [
 	 | file data |
@@ -68,4 +74,5 @@ AutoContainer >> saveToFile: fileName [
    file nextPutAll: data.
 
    file close.
+
 ]
