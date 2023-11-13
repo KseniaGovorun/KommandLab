@@ -42,6 +42,7 @@ Bus >> initialize [
 	TO := true.
 ]
 
+
 { #category : #'class initialization' }
 Bus >> initialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 
@@ -51,8 +52,10 @@ Bus >> initialize: n year: y mileage: m places: p cost: c condit: con TO: t [
 	p < 51
 		ifTrue: [ places := p ]
 		ifFalse: [
-			Transcript
-				show: 'Місць в автобусі максимум доступно 50'].
+			messageText := 'Місць в автобусі максимум доступно 50'.
+			Transcript show: messageText.
+			^ Error new message: messageText.
+			].
 	cost := c.
 	condit := con.
 	TO := t

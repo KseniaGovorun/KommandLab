@@ -20,7 +20,6 @@ Class {
 Transport >> < aTransport [
 
 	^ (self priceTrip:1) < (aTransport priceTrip:1)
-]
 
 { #category : #comparing }
 Transport >> > aTransport [
@@ -159,6 +158,14 @@ Transport >> tO [
 Transport >> tO: aBoolean [
 
 	TO := aBoolean
+]
+
+{ #category : #writing }
+Transport >> writeToFile: fileName [
+	| file |
+	file := fileName asFileReference writeStream.
+	self printOn: file.
+	file close.
 ]
 
 { #category : #accessing }

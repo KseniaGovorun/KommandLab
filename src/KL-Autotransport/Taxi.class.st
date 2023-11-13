@@ -42,7 +42,20 @@ Taxi >> initialize: n year: y mileage: m places: p cost: c maxSpeed: ms TO: t [
 			Transcript
 				show: 'Місць в таксі максимум доступно 4'].
 	cost := c.
-	TO := t
+	TO := t.
+	maxSpeed := ms.
+]
+
+{ #category : #accessing }
+Taxi >> maxSpeed [
+
+	^ maxSpeed
+]
+
+{ #category : #accessing }
+Taxi >> maxSpeed: aNumber [
+
+	maxSpeed := aNumber
 ]
 
 { #category : #calculating }

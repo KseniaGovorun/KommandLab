@@ -49,8 +49,30 @@ AutoContainer >> initialize [
 	memory := OrderedCollection new
 ]
 
+
 { #category : #accessing }
 AutoContainer >> memory [
 
 	^ memory
+
+{ #category : #reading }
+AutoContainer >> readFromFile: fileName [
+	 | file data |
+	 file := fileName asFileReference  readStream.
+	
+	 data:= STON fromStream: file.
+	 memory := data.
+	
+	^data.
+]
+
+{ #category : #writing }
+AutoContainer >> saveToFile: fileName [ 
+	| file data |
+	file := fileName asFileReference writeStream.
+	data:= STON toStringPretty:  memory.
+   file nextPutAll: data.
+
+   file close.
+
 ]
