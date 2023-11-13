@@ -28,6 +28,19 @@ Transport >> > aTransport [
 	^ aTransport < self
 ]
 
+{ #category : #accessing }
+Transport >> TO [
+
+	^ TO
+]
+
+{ #category : #accessing }
+Transport >> TO: aValue [
+
+	TO := aValue
+
+]
+
 { #category : #abstract }
 Transport >> Trip: dictance [
 

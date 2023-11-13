@@ -48,3 +48,9 @@ AutoContainer >> initialize [
 
 	memory := OrderedCollection new
 ]
+
+{ #category : #accessing }
+AutoContainer >> memory [
+
+	^ memory
+]

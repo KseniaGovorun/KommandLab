@@ -74,7 +74,7 @@ ManifestKLAutotransport class >> ruleReIvarNeitherReadNorWrittenRuleV1FalsePosit
 ManifestKLAutotransport class >> ruleReVariableAssignedLiteralRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGClassDefinition #(#Taxi)) #'2023-11-01T19:09:04.341+02:00') )
+	^ #(#(#(#RGClassDefinition #(#Taxi)) #'2023-11-01T19:09:04.341+02:00') #(#(#RGClassDefinition #(#TransportCompany)) #'2023-11-13T22:41:09.639+02:00') )
 ]
 
 { #category : #'code-critics' }
@@ -85,8 +85,22 @@ ManifestKLAutotransport class >> ruleUnclassifiedMethodsRuleV1FalsePositive [
 ]
 
 { #category : #'code-critics' }
+ManifestKLAutotransport class >> ruleUncommonMessageSendRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#TransportCompany #checkTO #false)) #'2023-11-13T22:59:01.676+02:00') )
+]
+
+{ #category : #'code-critics' }
 ManifestKLAutotransport class >> ruleUtilityMethodsRuleV1FalsePositive [
 
 	<ignoreForCoverage>
 	^ #(#(#(#RGMethodDefinition #(#Bus #priceTrip: #false)) #'2023-10-25T21:07:55.154+03:00') #(#(#RGMethodDefinition #(#Taxi #priceTrip: #false)) #'2023-10-25T21:14:47.706+03:00') #(#(#RGMethodDefinition #(#Bus #afterTrip: #false)) #'2023-11-01T19:06:19.011+02:00') #(#(#RGMethodDefinition #(#Taxi #afterTrip: #false)) #'2023-11-01T19:07:02.904+02:00') )
+]
+
+{ #category : #'code-critics' }
+ManifestKLAutotransport class >> ruleVariableReferencedOnceRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGClassDefinition #(#TransportCompany)) #'2023-11-13T22:41:06.668+02:00') )
 ]

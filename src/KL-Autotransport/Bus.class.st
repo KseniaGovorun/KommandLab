@@ -33,7 +33,7 @@ Bus >> condit: aBoolean [
 { #category : #initialization }
 Bus >> initialize [ 
 
-	self number: 23. 
+	number:= 23. 
 	year := 2003.
 	mileage := 0.
 	places := 50.
