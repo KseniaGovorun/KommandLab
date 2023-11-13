@@ -19,7 +19,7 @@ Class {
 { #category : #comparing }
 Transport >> < aTransport [
 
-	^ self priceTrip < aTransport priceTrip
+	^ (self priceTrip:1) < (aTransport priceTrip:1)
 ]
 
 { #category : #comparing }
@@ -31,10 +31,11 @@ Transport >> > aTransport [
 { #category : #abstract }
 Transport >> Trip: dictance [
 
-	| price cnf |
+	| price cnf strprice|
 	price := self priceTrip: dictance.
+	strprice:= price printString.
 	cnf:=UIManager default
-		           confirm: 'price'
+		           confirm: strprice
 		           label: 'Is price gut for you?'.
 		cnf 
 		ifTrue: [ self afterTrip: dictance ]
